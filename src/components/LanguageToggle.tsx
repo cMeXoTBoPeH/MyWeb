@@ -5,15 +5,13 @@ import { locales, Locale } from "@/i18n/i18n-config";
 
 function replaceLocale(pathname: string, nextLocale: Locale): string {
   const parts = pathname.split("/").filter(Boolean);
-  // Remove basePath 'MyWeb' if present in client path
-  if (parts[0] === 'MyWeb') parts.shift();
-  if (parts.length === 0) return `/MyWeb/${nextLocale}/`;
+  if (parts.length === 0) return `/${nextLocale}/`;
   if (locales.includes(parts[0] as Locale)) {
     parts[0] = nextLocale;
-    const path = "/MyWeb/" + parts.join("/");
+    const path = "/" + parts.join("/");
     return path.endsWith('/') ? path : path + '/';
   }
-  const path = `/MyWeb/${nextLocale}/` + parts.join("/");
+  const path = `/${nextLocale}/` + parts.join("/");
   return path.endsWith('/') ? path : path + '/';
 }
 
