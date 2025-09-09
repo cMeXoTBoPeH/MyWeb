@@ -38,18 +38,18 @@ export default async function LocaleLayout({
   const dict = await getDictionary(locale);
 
   const nav = [
-    { href: `/${locale}`, label: dict.meta.nav.home },
-    { href: `/${locale}/services`, label: dict.meta.nav.services },
-    { href: `/${locale}/work`, label: dict.meta.nav.work },
-    { href: `/${locale}/about`, label: dict.meta.nav.about },
-    { href: `/${locale}/contact`, label: dict.meta.nav.contact },
+    { href: `/MyWeb/${locale}/`, label: dict.meta.nav.home },
+    { href: `/MyWeb/${locale}/services/`, label: dict.meta.nav.services },
+    { href: `/MyWeb/${locale}/work/`, label: dict.meta.nav.work },
+    { href: `/MyWeb/${locale}/about/`, label: dict.meta.nav.about },
+    { href: `/MyWeb/${locale}/contact/`, label: dict.meta.nav.contact },
   ];
 
   return (
     <div className="min-h-dvh flex flex-col">
       <header className="sticky top-0 z-50 backdrop-blur bg-background-light/70 dark:bg-background-dark/60 border-b border-muted-light/70 dark:border-muted-dark/60">
         <div className="container-max flex items-center justify-between h-16">
-          <Link href={`/${locale}`} aria-label={dict.meta.siteName} className="elevate">
+          <Link href={`/MyWeb/${locale}/`} aria-label={dict.meta.siteName} className="elevate">
             <Logo />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
@@ -72,10 +72,10 @@ export default async function LocaleLayout({
         <div className="container-max py-8 text-sm flex items-center justify-between">
           <div className="opacity-70">© {new Date().getFullYear()} {dict.meta.siteName}.</div>
           <div className="flex items-center gap-6 opacity-80">
-            <Link href={`/${locale}/services`} className="hover:text-accent">{dict.meta.nav.services}</Link>
-            <Link href={`/${locale}/work`} className="hover:text-accent">{dict.meta.nav.work}</Link>
-            <Link href={`/${locale}/about`} className="hover:text-accent">{dict.meta.nav.about}</Link>
-            <Link href={`/${locale}/contact`} className="hover:text-accent">{dict.meta.nav.contact}</Link>
+            <Link href={`/MyWeb/${locale}/services/`} className="hover:text-accent">{dict.meta.nav.services}</Link>
+            <Link href={`/MyWeb/${locale}/work/`} className="hover:text-accent">{dict.meta.nav.work}</Link>
+            <Link href={`/MyWeb/${locale}/about/`} className="hover:text-accent">{dict.meta.nav.about}</Link>
+            <Link href={`/MyWeb/${locale}/contact/`} className="hover:text-accent">{dict.meta.nav.contact}</Link>
           </div>
         </div>
       </footer>

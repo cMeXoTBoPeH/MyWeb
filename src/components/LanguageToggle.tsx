@@ -7,12 +7,14 @@ function replaceLocale(pathname: string, nextLocale: Locale): string {
   const parts = pathname.split("/").filter(Boolean);
   // Remove basePath 'MyWeb' if present in client path
   if (parts[0] === 'MyWeb') parts.shift();
-  if (parts.length === 0) return `/MyWeb/${nextLocale}`;
+  if (parts.length === 0) return `/MyWeb/${nextLocale}/`;
   if (locales.includes(parts[0] as Locale)) {
     parts[0] = nextLocale;
-    return "/MyWeb/" + parts.join("/");
+    const path = "/MyWeb/" + parts.join("/");
+    return path.endsWith('/') ? path : path + '/';
   }
-  return `/MyWeb/${nextLocale}/` + parts.join("/");
+  const path = `/MyWeb/${nextLocale}/` + parts.join("/");
+  return path.endsWith('/') ? path : path + '/';
 }
 
 export default function LanguageToggle({ current }: { current: Locale }) {

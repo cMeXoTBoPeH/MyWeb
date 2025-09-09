@@ -19,10 +19,10 @@ export default async function Home({ params }: { params: { locale: string } }) {
         </h1>
         <p className="text-xl md:text-2xl opacity-80 mb-10 max-w-2xl">{dict.hero.subcopy}</p>
         <div className="flex items-center gap-4">
-          <Link href={`/${locale}/contact`} className="elevate rounded px-5 py-3 bg-foreground-light text-background-light dark:bg-foreground-dark dark:text-background-dark hover:opacity-90">
+          <Link href={`/MyWeb/${locale}/contact/`} className="elevate rounded px-5 py-3 bg-foreground-light text-background-light dark:bg-foreground-dark dark:text-background-dark hover:opacity-90">
             {dict.hero.primaryCta}
           </Link>
-          <Link href={`/${locale}/work`} className="elevate rounded px-5 py-3 border border-muted-light/70 dark:border-muted-dark/60 hover:text-accent">
+          <Link href={`/MyWeb/${locale}/work/`} className="elevate rounded px-5 py-3 border border-muted-light/70 dark:border-muted-dark/60 hover:text-accent">
             {dict.hero.secondaryCta}
           </Link>
         </div>
@@ -68,7 +68,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
           <div className="flex-1">
             <h2 className="font-heading tracking-wideplus text-3xl md:text-4xl mb-4">{dict.featured.title}</h2>
             <p className="opacity-80 mb-6">A premium redesign that improved conversions and speed.</p>
-            <Link href={`/${locale}/work`} className="inline-block elevate rounded px-5 py-3 border border-muted-light/70 dark:border-muted-dark/60 hover:text-accent">
+            <Link href={`/MyWeb/${locale}/work/`} className="inline-block elevate rounded px-5 py-3 border border-muted-light/70 dark:border-muted-dark/60 hover:text-accent">
               {dict.featured.cta}
             </Link>
           </div>
