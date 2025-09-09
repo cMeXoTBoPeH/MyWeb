@@ -23,16 +23,31 @@ export default async function Contact({ params }: { params: { locale: string } }
           <input id="email" name="email" type="email" required placeholder={dict.contact.form.placeholders.email} className="rounded px-4 py-3 bg-transparent border border-muted-light/70 dark:border-muted-dark/60" />
         </div>
         <div className="grid gap-2">
+          <label htmlFor="company">{dict.contact.form.company}</label>
+          <input id="company" name="company" type="text" placeholder={dict.contact.form.placeholders.company} className="rounded px-4 py-3 bg-transparent border border-muted-light/70 dark:border-muted-dark/60" />
+        </div>
+        <div className="grid gap-2">
+          <label htmlFor="budget">{dict.contact.form.budget}</label>
+          <select id="budget" name="budget" className="rounded px-4 py-3 bg-transparent border border-muted-light/70 dark:border-muted-dark/60">
+            {dict.contact.form.budgetOptions.map((opt: string) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+        <div className="grid gap-2">
           <label htmlFor="message">{dict.contact.form.message}</label>
           <textarea id="message" name="message" required placeholder={dict.contact.form.placeholders.message} rows={6} className="rounded px-4 py-3 bg-transparent border border-muted-light/70 dark:border-muted-dark/60" />
         </div>
+        <div className="text-xs opacity-70">{dict.contact.privacy}</div>
         <div>
           <button type="submit" className="elevate rounded px-5 py-3 bg-foreground-light text-background-light dark:bg-foreground-dark dark:text-background-dark hover:opacity-90">{dict.contact.form.submit}</button>
         </div>
       </form>
-      <div className="mt-10 opacity-80">
-        <a className="hover:text-accent" href="mailto:hello@websi.example">hello@websi.example</a> · <a className="hover:text-accent" href="#" aria-label="Twitter">Twitter</a> · <a className="hover:text-accent" href="#" aria-label="LinkedIn">LinkedIn</a>
-      </div>
+      {dict.contact.alt && (
+        <div className="mt-10 opacity-80">
+          {dict.contact.alt}
+        </div>
+      )}
     </section>
   );
 }

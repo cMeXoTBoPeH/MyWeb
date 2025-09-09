@@ -14,6 +14,7 @@
   "hero": {
     "headline": "Websites that feel effortless.",
     "subcopy": "Design, performance, precision—delivered.",
+    "extra": "We design and build fast, accessible websites that look premium and load instantly across devices.",
     "primaryCta": "Start a project",
     "secondaryCta": "See our work"
   },
@@ -24,36 +25,140 @@
     "title": "What we do",
     "design": {
       "title": "Design",
-      "desc": "Beautiful interfaces that serve a purpose."
+      "desc": "Beautiful interfaces that serve a purpose.",
+      "blurb": "We craft clean layouts, clear hierarchy, and striking visuals so your brand feels premium and intuitive."
     },
     "development": {
       "title": "Development",
-      "desc": "Reliable, accessible, future-ready."
+      "desc": "Reliable, accessible, future-ready.",
+      "blurb": "Standards-based code, responsive by default, and tested across modern browsers and devices."
     },
     "optimization": {
       "title": "Optimization",
-      "desc": "Faster loads, better rankings."
+      "desc": "Faster loads, better rankings.",
+      "blurb": "Core Web Vitals, on-page SEO, and image optimization to boost search visibility and conversions."
     }
   },
   "performance": {
     "title": "Performance at the core",
-    "desc": "We target Core Web Vitals so your site feels instant."
+    "intro": "We focus on real-world speed so your site feels instant for everyone.",
+    "metrics": {
+      "lcp": { "label": "LCP", "desc": "Main content appears quickly." },
+      "inp": { "label": "INP", "desc": "Interactions feel snappy and responsive." },
+      "cls": { "label": "CLS", "desc": "No jarring layout jumps." },
+      "fid": { "label": "FID", "desc": "Inputs register immediately on older setups too." }
+    },
+    "close": "Our goal: consistently excellent performance without compromising design."
   },
   "featured": {
-    "title": "Featured case study",
+    "title": "Premium redesign for a growth-stage brand",
+    "summary": "We rebuilt their marketing site with a minimalist design system, trimmed 42% of page weight, and lifted contact conversions by 28%.",
     "cta": "Explore the work"
   },
   "services": {
     "title": "Services",
+    "intro": "Strategy, design, and development—delivered as a cohesive, performance-first website.",
     "items": [
-      { "en": "Custom Website Design", "bg": "Дизайн на уебсайтове по поръчка" },
-      { "en": "Responsive Development", "bg": "Отзивчиво разработване" },
-      { "en": "E-Commerce", "bg": "Електронна търговия" },
-      { "en": "Performance & SEO", "bg": "Оптимизация и SEO" }
-    ]
+      {
+        "en": "Custom Website Design",
+        "bg": "Дизайн на уебсайтове по поръчка",
+        "bullets": {
+          "en": [
+            "Brand-aligned layouts, premium typography, and clear messaging.",
+            "Design systems for consistency and speed."
+          ],
+          "bg": [
+            "Макети, съобразени с бранда, премиум типография и ясно послание.",
+            "Дизайн система за последователност и скорост."
+          ]
+        }
+      },
+      {
+        "en": "Responsive Development",
+        "bg": "Отзивчива разработка",
+        "bullets": {
+          "en": [
+            "Modern, standards-based code with accessibility built-in.",
+            "Thorough cross-browser/device testing."
+          ],
+          "bg": [
+            "Модерен код по стандарти с вградена достъпност.",
+            "Щателно тестване на браузъри и устройства."
+          ]
+        }
+      },
+      {
+        "en": "E-Commerce",
+        "bg": "Електронна търговия",
+        "bullets": {
+          "en": [
+            "Fast product browsing, secure checkout, and scalable architecture.",
+            "Integrations with payments, analytics, and inventory."
+          ],
+          "bg": [
+            "Бързо разглеждане на продукти, сигурно разплащане и скалируема архитектура.",
+            "Интеграции с плащания, аналитика и наличности."
+          ]
+        }
+      },
+      {
+        "en": "Performance & SEO",
+        "bg": "Оптимизация и SEO",
+        "bullets": {
+          "en": [
+            "Core Web Vitals, image optimization, caching and CDNs.",
+            "Structured data, metadata, and clean URL strategy."
+          ],
+          "bg": [
+            "Core Web Vitals, оптимизация на изображения, кеширане и CDNs.",
+            "Структурирани данни, метаданни и ясна URL стратегия."
+          ]
+        }
+      }
+    ],
+    "cta": {
+      "en": "Have a project in mind? Start a project.",
+      "bg": "Имате идея за проект? Започнете проект."
+    }
   },
   "work": {
     "title": "Work",
+    "intro": "A few highlights from recent projects. Case studies available on request.",
+    "projects": [
+      {
+        "slug": "nordic-outfitters",
+        "en": {
+          "title": "Nordic Outfitters (E-commerce redesign)",
+          "oneLiner": "A minimalist storefront that increased mobile conversions by 22%."
+        },
+        "bg": {
+          "title": "Nordic Outfitters (редизайн на e-commerce)",
+          "oneLiner": "Минималистичен магазин, повишил мобилните конверсии с 22%."
+        }
+      },
+      {
+        "slug": "helio-labs",
+        "en": {
+          "title": "Helio Labs (SaaS marketing site)",
+          "oneLiner": "Crisp messaging and component-based pages cut build time and boosted leads by 31%."
+        },
+        "bg": {
+          "title": "Helio Labs (маркетингов сайт за SaaS)",
+          "oneLiner": "Ясни послания и компоненти повишиха запитванията с 31%."
+        }
+      },
+      {
+        "slug": "oak-and-pine",
+        "en": {
+          "title": "Oak & Pine (Boutique studio site)",
+          "oneLiner": "Editorial feel with perfect accessibility scores (AA+)."
+        },
+        "bg": {
+          "title": "Oak & Pine (сайт на бутиково студио)",
+          "oneLiner": "Редакторско усещане и отлична достъпност (AA+)."
+        }
+      }
+    ],
     "case": {
       "problem": "Problem",
       "approach": "Approach",
@@ -62,37 +167,39 @@
   },
   "about": {
     "title": "About",
-    "story": "We design and build websites with a refined, minimalist approach.",
-    "philosophy": "Clarity, performance, and craft guide every decision.",
-    "bio": "We are a small team focused on quality over quantity.",
+    "story": "We’re a small, focused team that believes in clarity, speed, and professionalism.",
+    "philosophy": "Design with purpose. Ship fast, measure, iterate. Accessibility and performance by default.",
+    "bio": "Web Solutions International is led by a senior web developer and designer with 8+ years delivering clean, modern, and fast websites for SMEs and startups across Europe.",
     "how": {
       "title": "How we work",
-      "items": [
-        "Research before pixels",
-        "Accessibility by default",
-        "Performance as a feature",
-        "Precise execution"
-      ]
+      "items": ["Discovery", "Design", "Build", "Optimize"]
     }
   },
   "contact": {
     "title": "Contact",
-    "microcopy": "We reply within one business day.",
+    "microcopy": "Tell us a bit about your project and we’ll reply within one business day.",
     "form": {
       "name": "Name",
       "email": "Email",
+      "company": "Company (optional)",
+      "budget": "Budget",
+      "budgetOptions": ["Under €2k", "€2–5k", "€5–10k", "€10k+"],
       "message": "Project details",
       "submit": "Send message",
       "placeholders": {
         "name": "Your full name",
         "email": "you@company.com",
+        "company": "Your company (optional)",
         "message": "Tell us about your project, timeline, and goals."
       }
-    }
+    },
+    "privacy": "We’ll only use your details to reply to this inquiry.",
+    "alt": "Prefer email? hello@websolutionsintl.com"
   },
   "footer": {
     "rights": "All rights reserved.",
-    "quickLinks": "Quick links"
+    "quickLinks": "Quick links",
+    "microcopy": "Made with performance, accessibility, and clarity."
   }
 }
 

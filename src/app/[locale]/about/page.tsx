@@ -22,7 +22,7 @@ export default async function About({ params }: { params: { locale: string } }) 
       <div>
         <h2 className="font-heading tracking-wideplus text-2xl md:text-3xl mb-4">{dict.about.how.title}</h2>
         <ul className="grid md:grid-cols-2 gap-3">
-          {dict.about.how.items.map((item, i) => (
+          {dict.about.how.items.map((item: string, i: number) => (
             <li key={i} className="p-4 rounded border border-muted-light/70 dark:border-muted-dark/60">{item}</li>
           ))}
         </ul>

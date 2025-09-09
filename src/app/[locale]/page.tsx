@@ -17,7 +17,10 @@ export default async function Home({ params }: { params: { locale: string } }) {
         <h1 className="font-heading tracking-wideplus text-5xl md:text-7xl leading-[1.08] mb-6">
           {dict.hero.headline}
         </h1>
-        <p className="text-xl md:text-2xl opacity-80 mb-10 max-w-2xl">{dict.hero.subcopy}</p>
+        <p className="text-xl md:text-2xl opacity-80 mb-4 max-w-2xl">{dict.hero.subcopy}</p>
+        {dict.hero.extra && (
+          <p className="opacity-80 mb-10 max-w-2xl">{dict.hero.extra}</p>
+        )}
         <div className="flex items-center gap-4">
           <Link href={`/${locale}/contact/`} className="elevate rounded px-5 py-3 bg-foreground-light text-background-light dark:bg-foreground-dark dark:text-background-dark hover:opacity-90">
             {dict.hero.primaryCta}
@@ -42,7 +45,8 @@ export default async function Home({ params }: { params: { locale: string } }) {
           {[dict.pillars.design, dict.pillars.development, dict.pillars.optimization].map((p, idx) => (
             <div key={idx} className="elevate p-6 rounded-lg border border-muted-light/70 dark:border-muted-dark/60">
               <h3 className="text-xl mb-2">{p.title}</h3>
-              <p className="opacity-80">{p.desc}</p>
+              <p className="opacity-80 mb-2">{p.desc}</p>
+              {p.blurb && <p className="opacity-70 text-sm">{p.blurb}</p>}
             </div>
           ))}
         </div>
@@ -51,15 +55,20 @@ export default async function Home({ params }: { params: { locale: string } }) {
       <section className="hairline">
         <div className="container-max py-16 md:py-24">
           <h2 className="font-heading tracking-wideplus text-3xl md:text-4xl mb-4">{dict.performance.title}</h2>
-          <p className="opacity-80 mb-8 max-w-2xl">{dict.performance.desc}</p>
+          {dict.performance.intro && (
+            <p className="opacity-80 mb-8 max-w-2xl">{dict.performance.intro}</p>
+          )}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {['LCP', 'FID', 'CLS', 'INP'].map((v) => (
-              <div key={v} className="p-4 rounded border border-muted-light/70 dark:border-muted-dark/60 text-center">
-                <div className="text-2xl font-heading">{v}</div>
-                <div className="text-xs opacity-60">Core Web Vital</div>
+            {[dict.performance.metrics.lcp, dict.performance.metrics.inp, dict.performance.metrics.cls, dict.performance.metrics.fid].map((m, i) => (
+              <div key={i} className="p-4 rounded border border-muted-light/70 dark:border-muted-dark/60 text-center">
+                <div className="text-2xl font-heading">{m.label}</div>
+                <div className="text-xs opacity-60">{m.desc}</div>
               </div>
             ))}
           </div>
+          {dict.performance.close && (
+            <p className="opacity-80 mt-8 max-w-2xl">{dict.performance.close}</p>
+          )}
         </div>
       </section>
 
@@ -67,7 +76,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
         <div className="flex flex-col md:flex-row items-start gap-8 p-6 rounded-lg border border-muted-light/70 dark:border-muted-dark/60">
           <div className="flex-1">
             <h2 className="font-heading tracking-wideplus text-3xl md:text-4xl mb-4">{dict.featured.title}</h2>
-            <p className="opacity-80 mb-6">A premium redesign that improved conversions and speed.</p>
+            {dict.featured.summary && <p className="opacity-80 mb-6">{dict.featured.summary}</p>}
             <Link href={`/${locale}/work/`} className="inline-block elevate rounded px-5 py-3 border border-muted-light/70 dark:border-muted-dark/60 hover:text-accent">
               {dict.featured.cta}
             </Link>

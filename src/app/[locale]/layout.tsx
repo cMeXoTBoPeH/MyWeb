@@ -70,8 +70,9 @@ export default async function LocaleLayout({
       <main className="flex-1">{children}</main>
       <footer className="hairline">
         <div className="container-max py-8 text-sm flex items-center justify-between">
-          <div className="opacity-70">© {new Date().getFullYear()} {dict.meta.siteName}.</div>
-          <div className="flex items-center gap-6 opacity-80">
+          <div className="opacity-70">© {new Date().getFullYear()} {dict.meta.siteName}. {locale === 'en' ? 'All rights reserved.' : 'Всички права запазени.'}</div>
+          <div className="hidden md:block opacity-80">{dict.footer.microcopy}</div>
+          <div className="flex items-center gap-6 opacity-80 md:hidden">
             <Link href={`/${locale}/services/`} className="hover:text-accent">{dict.meta.nav.services}</Link>
             <Link href={`/${locale}/work/`} className="hover:text-accent">{dict.meta.nav.work}</Link>
             <Link href={`/${locale}/about/`} className="hover:text-accent">{dict.meta.nav.about}</Link>
