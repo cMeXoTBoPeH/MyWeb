@@ -6,6 +6,10 @@ import Logo from "@/components/Logo";
 import LanguageToggle from "@/components/LanguageToggle";
 import ThemeToggle from "@/components/ThemeToggle";
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "bg" }];
+}
+
 export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(params.locale);
   return {

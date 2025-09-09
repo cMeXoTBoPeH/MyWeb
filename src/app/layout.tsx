@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s • Web Solutions International",
   },
   description: "We build clean, fast, and modern websites.",
-  metadataBase: new URL("https://www.websi.example"),
+  metadataBase: new URL("https://cMeXoTBoPeH.github.io/MyWeb"),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

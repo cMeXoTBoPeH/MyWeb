@@ -1,7 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { Locale, defaultLocale, isLocale } from "@/i18n/i18n-config";
+
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "bg" }];
+}
 
 export default async function Home({ params }: { params: { locale: string } }) {
   const locale: Locale = isLocale(params.locale) ? params.locale : defaultLocale;

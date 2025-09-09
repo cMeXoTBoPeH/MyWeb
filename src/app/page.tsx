@@ -1,6 +1,10 @@
-import { redirect } from "next/navigation";
+"use client";
+import { useEffect } from "react";
 
 export default function Index() {
-  redirect("/en");
+  useEffect(() => {
+    window.location.replace("/MyWeb/en/");
+  }, []);
+  return null;
 }
 

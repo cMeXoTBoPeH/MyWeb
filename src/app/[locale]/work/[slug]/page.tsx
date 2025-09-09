@@ -1,6 +1,14 @@
 import { getDictionary } from "@/i18n/get-dictionary";
 import { Locale, defaultLocale, isLocale } from "@/i18n/i18n-config";
 
+export function generateStaticParams() {
+  const slugs = ["case-1", "case-2", "case-3", "case-4", "case-5", "case-6"];
+  return [
+    ...slugs.map((slug) => ({ locale: "en", slug })),
+    ...slugs.map((slug) => ({ locale: "bg", slug })),
+  ];
+}
+
 export default async function CaseStudy({ params }: { params: { locale: string; slug: string } }) {
   const locale: Locale = isLocale(params.locale) ? params.locale : defaultLocale;
   const dict = await getDictionary(locale);

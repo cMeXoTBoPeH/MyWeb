@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://www.websi.example'
+  const base = 'https://cMeXoTBoPeH.github.io/MyWeb'
   return [
     { url: `${base}/en`, changeFrequency: 'weekly', priority: 1 },
     { url: `${base}/en/services`, changeFrequency: 'monthly', priority: 0.8 },
