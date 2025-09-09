@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+body {
+  @apply bg-background-light text-foreground-light dark:bg-background-dark dark:text-foreground-dark antialiased font-body;
+}
+
+.container-max {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.elevate {
+  @apply transition-transform ease-smooth duration-200 will-change-transform hover:-translate-y-0.5;
+}
+
+.hairline {
+  @apply border-t border-muted-light/70 dark:border-muted-dark/60;
+}
+

@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "siteName": "Web Solutions International",
+    "tagline": "We build clean, fast, and modern websites.",
+    "description": "Design, development, and optimization for premium, high-performance websites.",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "work": "Work",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "headline": "Websites that feel effortless.",
+    "subcopy": "Design, performance, precision—delivered.",
+    "primaryCta": "Start a project",
+    "secondaryCta": "See our work"
+  },
+  "credibility": {
+    "title": "Trusted by forward-thinking teams"
+  },
+  "pillars": {
+    "title": "What we do",
+    "design": {
+      "title": "Design",
+      "desc": "Beautiful interfaces that serve a purpose."
+    },
+    "development": {
+      "title": "Development",
+      "desc": "Reliable, accessible, future-ready."
+    },
+    "optimization": {
+      "title": "Optimization",
+      "desc": "Faster loads, better rankings."
+    }
+  },
+  "performance": {
+    "title": "Performance at the core",
+    "desc": "We target Core Web Vitals so your site feels instant."
+  },
+  "featured": {
+    "title": "Featured case study",
+    "cta": "Explore the work"
+  },
+  "services": {
+    "title": "Services",
+    "items": [
+      { "en": "Custom Website Design", "bg": "Дизайн на уебсайтове по поръчка" },
+      { "en": "Responsive Development", "bg": "Отзивчиво разработване" },
+      { "en": "E-Commerce", "bg": "Електронна търговия" },
+      { "en": "Performance & SEO", "bg": "Оптимизация и SEO" }
+    ]
+  },
+  "work": {
+    "title": "Work",
+    "case": {
+      "problem": "Problem",
+      "approach": "Approach",
+      "result": "Result"
+    }
+  },
+  "about": {
+    "title": "About",
+    "story": "We design and build websites with a refined, minimalist approach.",
+    "philosophy": "Clarity, performance, and craft guide every decision.",
+    "bio": "We are a small team focused on quality over quantity.",
+    "how": {
+      "title": "How we work",
+      "items": [
+        "Research before pixels",
+        "Accessibility by default",
+        "Performance as a feature",
+        "Precise execution"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "microcopy": "We reply within one business day.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Project details",
+      "submit": "Send message",
+      "placeholders": {
+        "name": "Your full name",
+        "email": "you@company.com",
+        "message": "Tell us about your project, timeline, and goals."
+      }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "quickLinks": "Quick links"
+  }
+}
+
